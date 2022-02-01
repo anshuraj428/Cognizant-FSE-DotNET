@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simple Calculator</title>
+    <style>
+      .title {
+        text-align: center;
+        color: blue;
+        font-size: 20px;
+      }
+      .form-group {
+        display: table;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .form-group label,
+      .form-group input {
+        display: table-cell;
+      }
+      .form-group label {
+        width: 150px;
+      }
+      .form-group button {
+        background: transparent;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <font size="20" color="blue">Calculator</font>
+    <img
+      src="calculator.jpg"
+      name="headerimg"
+      height="300"
+      width="400"
+      alt="Calculator"
+    />
+    <div class="form-group">
+      <label>Input1 </label>
+      <input type="number" name="input1" />
+    </div>
+    <div class="form-group">
+      <label>Input2 </label>
+      <input type="number" name="input2" />
+    </div>
+
+    <div class="form-group">
+      <label>
+        Select Operation
+      </label>
+      <select name="operation" id="operation" required>
+        <option value="Select..">Select..</option>
+        <option value="ADD">ADD</option>
+        <option value="SUBTRACT">SUBTRACT</option>
+        <option value="MULTIPLY">MULTIPLY</option>
+        <option value="DIVIDE">DIVIDE</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <button type="submit">
+        <img
+          src="./calc.jpg"
+          name="submit"
+          width="80"
+          height="80"
+          alt="Submit"
+        />
+      </button>
+      <button type="reset">
+        <img
+          src="./reset.jpg"
+          name="reset"
+          width="80"
+          height="80"
+          alt="Reset"
+        />
+      </button>
+    </div>
+  </body>
+</html>
