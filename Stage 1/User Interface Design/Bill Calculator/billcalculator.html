@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    
+   
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Calculator</title>
+    <link rel="stylesheet" href="billcalc.css">
+</head>
+
+<body>
+    <main>
+        <form onsubmit="return calculateTotalPrice()">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="productName">Product Name</label>
+                        </td>
+                        <td>
+                            <input type="text" name="productName" id="productName" placeholder="Product Name" required="true" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="price">Price</label>
+                        </td>
+                        <td>
+                            <input type="number" name="price" id="price" placeholder="Product Price" required="true" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="qty">Quantity</label>
+                        </td>
+                        <td>
+                            <input type="number" name="qty" id="qty" min="1" placeholder="Enter quantity"  required="true" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="totalprice">Total Price in Rs.</label>
+                        </td>
+                        <td>
+                            <output id="totalprice" name="totalprice" for="price qty"></output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" name="submit" id="submit" value="Submit" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </main>
+    <script type="text/javascript" charset="utf-8">
+        function calculateTotalPrice(){
+            var price = document.getElementById('price').value;
+            var quantity = document.getElementById('qty').value;
+            document.getElementById('totalprice').innerHTML = price * quantity;
+            return false;
+        }
+    </script>
+</body>
+    
+    
+    
+    
+</html>
