@@ -1,145 +1,123 @@
-<!-- DO NOT CHANGE THE TEMPLATE. FILL ONLY THE SPECIFIED PART ALONE -->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Trinqet</title>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  
-  <style type="text/css">
-  .navbar-default {
-    background-color:#546d88;
-    border-color: #428BCA;
-    color: #FFFFFF;
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
     }
-
-  .navbar-nav > li > a:hover, 
-  .navbar-default .navbar-nav > li > a:focus {
-    color: #FFFFFF;
-    background-color: #336699;
-  }
-  .navbar-default .navbar-nav > li > a {
-    color: #FFFFFF;
-  }
-
-  body {
-    font-family: "Cabin",Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.428571429;
-     background-color:#E3EAED;
-    color: #616161;
-    margin-top: 70px;
-  }
-
-  h1{
-    font-family: 'Lobster',cursive;
-  }
-</style>
-</head>
-
-<body>
-  <div id="page">
-    <header class="container">
-      <div id="menu" class="navbar navbar-default navbar-fixed-top">
-      
-        <!-- Collection of nav links, forms, and other content for toggling -->
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li class="active"><a href="#">Contact</a></li>
-            </ul>
-        </div>
-      </div>
-    </header> 
-
-    <section id="body" class="container">
-      <div class="page-header">
-         <h1>Contact Us</h1>
-      </div>
-
-     <div class="row">
-        <form class="form-horizontal">
-            
-          <div class="form-group">
-            <label for="nameInput" class="control-label col-md-2">Your Name</label>
-            <div class="col-md-10">
-              <div class="input-group">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-chevron-down"></span></span>
-                <input type="text" name="nameInput" class="form-control" placeholder="e.g. Your Name" />
-               </div>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="emailInput" class="control-label col-md-2">Email</label>
-            <div class="col-md-10">
-              <div class="input-group">
-                <span class="input-group-addon">@</span>
-                <input type="email" name="emailInput" class="form-control" placeholder="e.g. Your Email" />
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="control-label col-md-2">Leisure Activity</label>
-            <div class="col-md-10">
-                
-              
-            <!--WRITE YOUR CODE FOR 'LEISURE ACTIVITY OPTIONS' -->
-                <!-- Split button -->
-                <div class="btn-group dropdown">
-                    <button type="button" class="btn btn-info" id="selectButton">Select One...</button>
-                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="caret"></span>
-                        <span class="sr-only">Toggle Dropdown</span>
-                    </button>
-                    <ul id="reasonDropdown" class="dropdown-menu">
-                        <li><a href="#">Robotics</a></li>
-                        <li><a href="#">Learning</a></li>
-                        <li><a href="#">Air Sports</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="disabled"><a href="#">Meditation</a></li>
-                    </ul>
-                </div>
-
-
-            </div>
-          </div>
     
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+   
+  </style>
+</head>
+<body>
 
-          <div class="form-group">
-            <label class="control-label col-md-2">Message</label>
-            <div class="col-md-10">
-              <textarea cols="40" rows="6" class="form-control" placeholder="e.g. The Message"></textarea>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <div class="col-md-10 col-md-offset-2">
-                
-                
-                    <!-- WRITE YOUR CODE FOR 'SUBMIT' BUTTON -->
-                <input type="submit" name="submit" id="submit" class="btn btn-primary" value="Submit" />
-            
-            </div>
-          </div>
-        </form>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container text-center"> 
+   
+  <div class="row content">
+
+    
+	<!-- FILL NECESSARY CODE FOR COLUMN 1 HERE -->
+
+        <div class="col-xs-1 col-sm-2 sidenav" id="col1">
+	        <h4> Our Branches </h4>
+	        <br>
+             <p>394 SW. Courtland Drive
+	        Egg Harbor Township, NJ 08234
+	        </p><br><br>
+            <p>76 East Middle River Street
+	        Methuen, MA 01844</p>
         </div>
-  </section>
-   </div>
-   <script>
-  $("#reasonDropdown li a").on("click", function () {
-    var reason = $(this).text();
-    console.log(reason)
-    $("#selectButton").text(reason);
-  });
-</script>
+   
+
+   
+    <!-- FILL NECESSARY CODE FOR COLUMN 2 HERE -->
+
+
+    <div class="col-xs-4 col-sm-8 text-left" id="col2">
+        <h1>Welcome</h1>
+        <p>You know, little of this, little of that. Do you have any kalhua? I know how he likes to present himself; 
+        Father's weakness is vanity. Hence the plot. Please see him, Jeffrey. He's a good man. And thorough. 
+	    They call Los Angeles the City of Angels. I didn't find it to be that exactly, but I'll allow as there are some 
+    	nice folks there. 'Course, I can't say I seen London, and I never been to France, and I ain't never seen no queen 
+    	in her damn undies as the fella says. But I'll tell you what, after seeing Los Angeles and thisahere story I'm about 
+    	to unfold wal, I guess I seen somethin' ever' bit as stupefyin' as ya'd see in any a those other places, and 
+    	in English too, so I can die with a smile on my face without feelin' like the good Lord cheated me. </p>
+        <hr>
+     	<img class="col-md-offset-2" src="img3.png" alt="3" />
+    </div>
+
+
+     <!-- FILL necessary CODE FOR COLUMN 3 HERE -->
+    
+    <div class="col-xs-1 col-sm-2 sidenav" id="col3">
+        <h4>Categories</h4>
+	    <div class="well">
+    	    <a href="#">Advice from Our Experts</a>
+	    </div>
+ 	    <div class="well">
+    	    <a href="#"> Our Blogs</a>
+	    </div>
+    </div>
+
+     
+
+   </div>       
+        
+ </div>
+
+   <!-- FILL YOUR CODE FOR SETTING THE BELOW ELEMENTS AS FOOTER HERE -->
+
+   <footer class="container-fluid text-center">
+       <p>Text placeholders courtesy of <a href="http://www.trinqet.com/">The TrinQet Inc.</a></p>
+   </footer>
 </body>
 </html>
